@@ -21,7 +21,8 @@ map <C-down> :tabl<cr>
 map <C-left> :tabp<cr>
 map <C-right> :tabn<cr>
 map <C-o> :tabnew \| Explore<cr> 
-map <C-w> :q<cr>
+nmap <C-n> :cnext<cr>
+nmap <C-p> :cprev<cr>
 
 " problems with Ctrl+C Ctrl+V on some terminals
 vmap <C-c> y<Esc>i
@@ -42,6 +43,7 @@ au VimEnter * silent execute '!echo -ne "\e[6 q"' | set cul | redraw!
 au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 au BufNewFile,BufRead Jenkinsfile setf groovy
 
+set tags=./tags;,tags;
 
 inoremap " ""<left>
 inoremap ' ''<left>
