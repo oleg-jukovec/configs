@@ -16,6 +16,8 @@ nnoremap <A-up> <C-W><C-K>
 nnoremap <A-right> <C-W><C-L>
 nnoremap <A-left> <C-W><C-H>
 inoremap <C-k> <C-o>dd
+inoremap <C-l> <C-X><C-]>
+
 map <C-up> :tabr<cr>
 map <C-down> :tabl<cr>
 map <C-left> :tabp<cr>
