@@ -1,9 +1,9 @@
 " location ~/.vimrc
-" # mkdir -p ~/.vim/pack/themes/start
-" # cd ~/.vim/pack/themes/start
-" # git clone https://github.com/dracula/vim.git dracula
-packadd! dracula
-colorscheme dracula
+hi ColorColumn ctermbg=8
+hi Visual ctermbg=8
+hi LineNr ctermfg=12
+hi MatchParen ctermfg=3
+hi MatchParen ctermbg=0
 
 source $VIMRUNTIME/mswin.vim
 behave mswin
@@ -61,3 +61,4 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
